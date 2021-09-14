@@ -1,0 +1,77 @@
+version: "2.0"
+
+actions:
+  - monitor_retriever
+  - battery_retriever
+  - network_retriever
+  - fan_retriever
+  - overheating_retriever
+  - harddrive_retriever
+  - filesystem_retriever
+  - performance_retriever
+  - crash_retriever
+  - mouse_keyboard_retriever
+
+intents:
+  - greet
+  - goodbye
+  - monitor
+  - network
+  - performance
+  - fan
+  - harddrive
+  - filesystem
+  - overheating
+  - battery
+  - mouse_keyboard
+  - crash
+
+entities:
+  - mouse
+  - keyboard
+  - freeze
+  - latency
+  - format
+  - copy
+  - restore
+  - permission
+  - cpu
+  - gpu
+  - connection
+
+slots:
+  connection:
+    type: text
+  freeze:
+    type: text
+  latency:
+    type: text
+  format:
+    type: text
+  copy:
+    type: text
+  restore:
+    type: text
+  permission:
+    type: text
+  cpu:
+    type: text
+  gpu:
+    type: text
+  mouse:
+    type: text
+  keyboard:
+    type: text
+  step:
+    type: float
+
+responses:
+  utter_greet:
+  - text: "Hey! How can i help you? :)"
+
+  utter_goodbye:
+  - text: "Bye and be safe out there!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

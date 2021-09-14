@@ -1,0 +1,44 @@
+language: en
+
+pipeline:
+   - name: SpacyNLP
+     model: 'en_core_web_md'
+   - name: SpacyTokenizer
+   - name: SpacyFeaturizer
+   - name: LanguageModelFeaturizer
+     model_weights: "bert-base-uncased"
+     model_name: "bert"
+   - name: LexicalSyntacticFeaturizer
+   - name: CountVectorsFeaturizer
+   - name: CountVectorsFeaturizer
+   - name: DIETClassifier
+     number_of_transformer_layers: 4
+     transformer_size: 256
+     batch_size: 
+      - 16
+      - 32
+     hidden_layers_sizes: 
+      text: [256, 256, 128, 128]
+     epochs: 100
+     constrain_similarities: true
+     model_confidence: linear_norm
+     evaluate_on_number_of_examples: 50
+     evaluate_every_number_of_epochs: 1
+     tensorboard_log_directory: ".tensorboard"
+     tensorboard_log_level: "epoch"
+   - name: ResponseSelector
+     model_confidence: linear_norm
+     epochs: 100
+     constrain_similarities: true
+   - name: FallbackClassifier
+     threshold: 0.3
+     ambiguity_threshold: 0.1
+
+policies:
+   - name: MemoizationPolicy
+   - name: TEDPolicy
+     model_confidence: linear_norm
+     max_history: 5
+     epochs: 50
+     constrain_similarities: true
+   - name: RulePolicy

@@ -1,0 +1,41 @@
+version: "2.0"
+nlu:
+- intent: battery
+  examples: |
+    - placeholder
+
+- intent: crash
+  examples: |
+    - placeholder
+
+- intent: overheating
+  examples: |
+    - placeholder
+
+- intent: performance
+  examples: |
+    - placeholder
+
+- intent: network
+  examples: |
+    - placeholder
+
+- intent: mouse_keyboard
+  examples: |
+    - placeholder
+
+- intent: filesystem
+  examples: |
+    - placeholder
+
+- intent: fan
+  examples: |
+    - placeholder
+
+- intent: harddrive
+  examples: |
+    - placeholder
+
+- intent: monitor
+  examples: |
+    - placeholder

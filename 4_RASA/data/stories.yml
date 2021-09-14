@@ -1,0 +1,53 @@
+version: "2.0"
+
+stories:
+- story: story_monitor
+  steps:
+  - intent: monitor
+  - action: monitor_retriever
+
+- story: story_fan
+  steps:
+  - intent: fan
+  - action: fan_retriever
+
+- story: story_overheating
+  steps:
+  - intent: overheating
+  - action: overheating_retriever
+
+- story: story_harddrive
+  steps:
+  - intent: harddrive
+  - action: harddrive_retriever
+
+- story: story_battery
+  steps:
+  - intent: battery
+  - action: battery_retriever
+
+- story: story_network
+  steps:
+  - intent: network
+  - action: network_retriever
+
+- story: story_performance
+  steps:
+  - intent: performance
+  - action: performance_retriever
+
+- story: story_filesystem
+  steps:
+  - intent: filesystem
+  - action: filesystem_retriever  
+
+- story: story_mouse_keyboard
+  steps:
+  - intent: mouse_keyboard
+  - action: mouse_keyboard_retriever  
+
+- story: story_crash
+  steps:
+  - intent: crash
+  - action: crash_retriever  
+

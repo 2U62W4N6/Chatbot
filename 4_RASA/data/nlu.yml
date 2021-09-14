@@ -1,0 +1,61 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hello
+    - placeholder
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - placeholder
+
+- intent: battery
+  examples: |
+    - my mac can’t charge anymore
+    - placeholder
+    
+- intent: crash
+  examples: |
+    - laptop is shutting down itself
+    - placeholder
+
+- intent: overheating
+  examples: |
+    - my computer overheats after few hours.
+    - placeholder
+
+- intent: performance
+  examples: |
+    - after 30min my [cpu](cpu) has full usage suddenly
+    - placeholder
+
+- intent: network
+  examples: |
+    - [ping](latency) spike during online session
+    - placeholder
+
+- intent: mouse_keyboard
+  examples: |
+    - any cheap [mouse](mouse)  to buy?
+    - placeholder
+
+- intent: filesystem
+  examples: |
+    - i need help changing [permissions](permission) on all of my folders
+    - placeholder
+
+- intent: fan
+  examples: |
+    - extremely loud noise from laptop fan
+    - placeholder
+
+- intent: harddrive
+  examples: |
+    - [formatting](format) current hard drive
+    - placeholder
+
+- intent: monitor
+  examples: |
+    - screen keeps going no [signal](connection) after installation of new gtx 1060
+    - placeholder
